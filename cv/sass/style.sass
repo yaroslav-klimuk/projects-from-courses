@@ -1,0 +1,729 @@
+$main-color: #fec110
+$grey: #252424
+body
+  font-family: 'Montserrat', sans-serif
+  overflow-x: hidden
+  color: #fff
+  background-color: $grey
+.container
+  max-width: 1320px
+  width: 100%
+  margin: 0 auto
+section
+  padding-left: 20px
+  padding-right: 20px
+  background-color: $grey
+.header
+  position: relative
+  width: 100%
+  margin: 0 auto
+  padding-bottom: 150px
+  background-color: $grey
+.openToWork
+  position: absolute
+  top: 0
+  right: 0
+  width: 120px
+  height: 120px
+  z-index: 99
+  &> img
+    width: 100%
+.main
+  display: flex
+  justify-content: center
+  align-items: flex-start
+  padding-top: 200px
+  padding-bottom: 30px
+  &-text
+    justify-content: flex-start
+    flex-direction: column
+    max-width: 40%
+    padding-left: 30px
+  &-photo
+    max-width: 220px
+    width: 100%
+    border-radius: 50%
+    border: 5px solid #3e3e3e
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .8)
+  &-btn
+    padding: 10px 30px
+    font-size: 16px
+    background-color: $grey
+    border: 2px solid $main-color
+    border-radius: 30px
+    text-decoration: none
+    color: #fff
+    transition: all .3s ease-in
+    box-shadow: 0px 5px 12px 0px rgba(0,0,0,0.35)
+    &:hover
+      background-color: $main-color
+      text-decoration: none
+      color: #232323
+.name
+  position: relative
+  font-size: 42px
+  font-weight: 400
+  padding-bottom: 10px
+  color: #fff
+.speciality
+  font-size: 20px
+  padding-bottom: 80px
+  line-height: 24px
+  color: #bbb7b7
+.goal
+  padding-bottom: 10px
+  margin-bottom: 0
+  font-size: 20px
+  font-weight: 300
+  color: #a8a2a2
+.section
+  &-title
+    display: inline-block
+    position: relative
+    margin-bottom: 50px
+    font-size: 28px
+    font-weight: 500
+    color: #fff
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: -7px
+      width: 100%
+      height: 2px
+      background-color: #353535
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      bottom: -7px
+      width: 40%
+      max-width: 30px
+      height: 2px
+      background-color: $main-color
+  &-text
+    width: 95%
+    margin: 0 auto
+    padding-bottom: 8px
+    font-size: 18px
+    font-weight: 300
+    line-height: 1.7
+    color: #fff
+.about
+  padding-bottom: 60px
+.skills
+  padding-bottom: 100px
+  overflow: hidden
+  &-level
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+  &-bars
+    display: flex
+    justify-content: center
+    width: 30%
+  &-lists
+    display: flex
+    justify-content: space-evenly
+    width: 50%
+  &-list
+    margin-top: 0
+    margin-bottom: 0
+    &__item
+      list-style: none
+      padding-top: 10px
+      position: relative
+      transform: translateX(1000px)
+      &::before
+        content: "⬤"
+        font-size: .7rem
+        margin-right: 10px
+        vertical-align: middle
+        color: $main-color
+        text-shadow: 0px 0px 9px $main-color
+      &:nth-child(1)
+        transition: all .6s ease
+      &:nth-child(2)
+        transition: all .8s ease
+      &:nth-child(3)
+        transition: all 1s ease
+      &:nth-child(4)
+        transition: all 1.2s ease
+.ldBar path.mainline
+  stroke: $main-color
+  stroke-linecap: round
+.ldBar.label-center > .ldBar-label
+  font-size: 1.5rem
+  text-shadow: none
+.ldBar>span
+  position: absolute
+  left: 50%
+  bottom: -30px
+  transform: translateX(-50%)
+  font-size: 1.2rem
+.timeline
+  &-row
+    display: flex
+    justify-content: space-evenly
+    width: 80%
+    margin: 0 auto
+    padding-bottom: 50px
+  &-item
+    position: relative
+    width: 50%
+    padding: 25px
+    border-radius: 10px
+    background-color: #313131
+    opacity: 0
+    box-sizing: border-box
+    transition: opacity .5s ease
+    &__position
+      padding-bottom: 10px
+      font-size: 18px
+      font-weight: 600
+    &__company
+      padding-bottom: 15px
+      font-size: 14px
+      line-height: 1.3
+      color: $main-color
+  &-date
+    position: relative
+    width: 150px
+    &::before
+      content: ''
+      position: absolute
+      top: 5px
+      right: calc(-25% + 9px)
+      width: 2px
+      height: calc(100% + 50px)
+      background-color: #696868
+      z-index: 1
+    &::after
+      content: "⬤"
+      position: absolute
+      top: 0
+      right: -25%
+      font-size: 1.4rem
+      color: #4a4949
+      z-index: 2
+      transition: all .5s ease
+    &__text
+      line-height: 1.7
+.point_active::after
+  content: "⬤"
+  position: absolute
+  top: 0
+  right: -25%
+  font-size: 1.4rem
+  color: $main-color
+  text-shadow: 0px 0px 9px $main-color
+  z-index: 2
+.last::before
+  display: none
+._active
+  transform: translateX(0)
+.anim
+  animation-name: bounce
+  animation-duration: .7s
+  opacity: 1
+@keyframes bounce
+  0%
+    transform: translateX(300px)
+  60%
+    transform: translateX(-20px)
+  100%
+    transform: translateX(0)
+.works
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    max-width: 80%
+    // width: 80%
+    padding-bottom: 40px
+    margin: 0 auto
+  &-item
+    max-width: 400px
+    width: 100%
+    padding-bottom: 20px
+    padding-right: 10px
+    padding-left: 10px
+    overflow: hidden
+  &-link
+    display: inline-block
+    width: 100%
+    filter: grayscale(.7)
+    transition: filter ease-in .3s
+    &:hover
+      filter: grayscale(0)
+    &__img
+      width: 100%
+      border-radius: 10px
+.contacts
+  padding-bottom: 100px
+.contact
+  display: flex
+  max-width: 70%
+  width: 100%
+  margin: 0 auto
+  align-items: flex-start
+  justify-content: space-between
+  border: 3px solid #292929
+  border-radius: 18px
+  &-links
+    display: flex
+    flex-direction: column
+    padding-top: 30px
+    padding-left: 60px
+    &__wrapper
+      display: flex
+      flex-direction: column
+      padding-bottom: 145px
+  &-title
+    padding-bottom: 20px
+    font-size: 24px
+    font-weight: 600
+  &-text
+    padding-bottom: 60px
+    line-height: 1.5
+    font-weight: 300
+    color: #b4b4b4
+  &-btn
+    width: 100%
+    box-sizing: border-box
+    margin-bottom: 20px
+    padding: 10px 10px
+    border-radius: 15px
+    border: 1px solid transparent
+    text-decoration: none
+    color: #fff
+    transition: all .4s ease
+    &:hover
+      background-color: #292929
+      border: 1px solid $main-color
+    &>img
+      width: 22px
+      padding-right: 15px
+      vertical-align: middle
+  &-form
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    max-width: 300px
+    width: 100%
+    padding: 30px 0
+    &__wrapper
+      display: flex
+      justify-content: center
+      width: 40%
+      border-radius: 15px
+      background-color: #313131
+    &>label
+      width: 100%
+      padding-bottom: 10px
+      text-align: left
+    &__btn
+      font-family: 'Montserrat', sans-serif
+      max-width: 60%
+      width: 100%
+      padding: 15px 10px
+      border: none
+      border-radius: 10px
+      outline: none
+      font-size: 16px
+      font-weight: 600
+      background-color: $main-color
+      color: #292929
+      transition: all .4s ease
+      &:hover
+        cursor: pointer
+        background-color: #cfa012
+.input
+  &-wrapper
+    position: relative
+    display: flex
+    width: 100%
+    &>input
+      width: 100%
+      height: 25px
+      padding-left: 30px
+      margin-bottom: 25px
+      border-radius: 5px
+      border: 2px solid transparent
+      transition: all .4s ease
+      box-shadow: 0px 0px 5px 0px transparent
+      color: $grey
+      font-family: 'Montserrat', sans-serif
+      font-size: 16px
+      &:focus
+        outline: none
+        border-color: $main-color
+        box-shadow: 0px 0px 5px 0px $main-color
+      &:focus + i
+        color: $main-color
+    & i
+      position: absolute
+      top: 7px
+      left: 10px
+      color: #b4b4c6
+      transition: all .4s ease
+textarea
+  font-family: 'Montserrat', sans-serif
+  font-size: 16px
+  resize: none
+  width: 100%
+  margin-bottom: 20px
+  padding-left: 10px
+  padding-top: 10px
+  border-radius: 5px
+  border: 2px solid transparent
+  transition: all .4s ease
+  box-shadow: 0px 0px 5px 0px transparent
+  &:focus
+    outline: none
+    border-color: $main-color
+    box-shadow: 0px 0px 5px 0px $main-color
+.social
+  &-list
+    display: flex
+    justify-content: space-evenly
+    align-items: center
+    width: 100%
+    padding-left: 0
+    list-style: none
+    &__items
+      border-radius: 50%
+      transition: all .3s ease
+      &:hover svg
+        fill: $grey
+      &:hover
+        background-color: $main-color
+    &__links
+      display: block
+      max-width: 24px
+      width: 100%
+      max-height: 24px
+      height: 100%
+      padding: 12px
+      &>svg
+        max-width: 24px
+        width: 100%
+        fill: #d6d2d0
+        transition: fill .3s ease
+.footer
+  padding-left: 20px
+  padding-right: 20px
+  background-color: $grey
+  padding-bottom: 50px
+  &>.container
+    display: flex
+    justify-content: center
+  &-list
+    display: flex
+    justify-content: space-between
+    max-width: 50%
+    width: 100%
+    &__link
+      position: relative
+      text-decoration: none
+      color: #fff
+      transition: color .2s ease
+      &::before
+        content: ''
+        position: absolute
+        bottom: -3px
+        right: 0
+        width: 0%
+        height: 2px
+        border-radius: 2px
+        background-color: $main-color
+        transition: .4s
+      &:hover::before
+        width: 100%
+        left: 0
+@media screen and ( max-width: 1400px )
+  .container
+    max-width: 1140px
+    width: 100%
+  section
+    padding-left: 30px
+    padding-right: 30px
+  .skills-bars
+    width: 30%
+  .ldBar.label-center > .ldBar-label
+    font-size: 1.4rem
+  .timeline-item
+    min-width: 420px
+  .timeline-row
+    width: 90%
+  .works-wrapper
+    max-width: 100%
+  .contact
+    max-width: 80%
+  .footer-list
+    max-width: 60%
+input[type='submit']
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+@media screen and ( max-width: 1200px )
+  .container
+    max-width: 960px
+    width: 100%
+  .skills-bars
+    width: 35%
+  .ldBar.label-center > .ldBar-label
+    font-size: 1.3rem
+  .ldBar>span
+    bottom: -20px
+  .contact
+    max-width: 80%
+    &-form
+      padding: 30px 30px
+      &__wrapper
+        width: 45%
+@media screen and ( max-width: 992px )
+  .container
+    max-width: 720px
+    width: 100%
+  .main-photo
+    max-width: 180px
+  .main-text
+    max-width: 60%
+  .name
+    font-size: 34px
+  .goal
+    font-size: 16px
+  .speciality
+    font-size: 18px
+  .section-title
+    font-size: 24px
+  .skills
+    &-bars
+      width: 40%
+    &-level
+      justify-content: space-between
+    &-lists
+      justify-content: space-evenly
+  .ldBar>span
+    bottom: -10px
+  .timeline
+    &-row
+      justify-content: space-between
+    &-date
+      &__text
+        font-size: 14px
+        max-width: 120px
+      &::before
+        right: calc(-30% + 9px)
+      &::after
+        right: -30%
+    &-item
+      min-width: 360px
+      padding: 20px
+      transform: translateX(-20px)
+
+      &__position
+        font-size: 16px
+      &__company
+        font-size: 12px
+  @keyframes bounce
+    0%
+      transform: translateX(300px)
+    60%
+      transform: translateX(-30px)
+    100%
+      transform: translateX(-20px)
+  .works-item
+    max-width: 300px
+  .contact
+    max-width: 100%
+    &-links
+      padding-top: 20px
+      padding-left: 20px
+    &-title
+      font-size: 20px
+    &-text
+      font-size: 14px
+      padding-bottom: 80px
+    &-form
+      &__btn
+        max-width: 100%
+      &__wrapper
+        width: 50%
+  .social-list
+    justify-content: space-around
+  .footer-list
+    max-width: 80%
+@media screen and ( max-width: 768px )
+  .container
+    max-width: 540px
+  .skills
+    &-level
+      align-items: center
+    &-bars
+      width: 50%
+    &-lists
+      width: 45%
+    &-list
+      justify-content: space-between
+      &__item
+        font-size: 14px
+        &::before
+          font-size: .6rem
+  .ldBar.label-center > .ldBar-label
+    font-size: 1.2rem
+  .ldBar > span
+    bottom: -5px
+    font-size: 1rem
+  .timeline
+    &-row
+      width: 100%
+    &-item
+      min-width: 300px
+    &-date
+      &::before
+        right: calc(-10% + 9px)
+      &::after
+        right: -10%
+  .works
+    &-item
+      max-width: 230px
+      padding-bottom: 5px
+      padding-left: 5px
+      padding-right: 5px
+  .contact
+    flex-direction: column
+    border: none
+    &-links
+      width: 60%
+      margin: 0 auto
+      margin-bottom: 20px
+      padding: 20px
+      border: 3px solid #292929
+      border-radius: 18px
+    &-title, &-text
+      text-align: center
+    &-btn
+      margin: 0 auto
+      margin-bottom: 20px
+    &-form
+      padding: 10px 0
+      &__wrapper
+        width: 60%
+        margin: 0 auto
+        padding: 20px
+        border: 3px solid #313131
+@media screen and ( max-width: 576px )
+  section
+    padding-left: 5px
+    padding-right: 5px
+  .footer
+    padding-left: 5px
+    padding-right: 5px
+  .container
+    width: 100%
+  .header
+    padding-bottom: 50px
+  .main
+    flex-direction: column
+    justify-content: center
+    padding-top: 100px
+    &-photo
+      margin: 0 auto
+      margin-bottom: 50px
+    &-text
+      min-width: 90%
+      margin: 0 auto
+      justify-content: center
+      padding-left: 0
+      text-align: center
+    &-btn
+      padding: 10px 60px
+  .name
+    padding-bottom: 10px
+    font-size: 30px
+  .speciality
+    font-size: 16px
+    padding-bottom: 40px
+  .goal
+    padding-bottom: 10px
+    font-size: 18px
+    text-align: justify
+    line-height: 22px
+    text-align: center
+  .skills
+    padding-bottom: 70px
+    &-level
+      flex-direction: column
+    &-bars
+      width: 60%
+      padding-bottom: 30px
+    &-lists
+      width: 95%
+  .timeline
+    &-row
+      flex-direction: column
+      justify-content: center
+      padding-bottom: 20px
+    &-item
+      margin: 0 auto
+      width: 90%
+      min-width: 250px
+      padding: 15px
+      transform: translateX(0)
+      &__company
+        padding-bottom: 5px
+    &-date
+      width: 250px
+      margin: 0 auto
+      padding-bottom: 10px
+      text-align: center
+      &::after
+        display: none
+      &::before
+        display: none
+      &__text
+        max-width: none
+  @keyframes bounce
+    0%
+      transform: translateX(300px)
+    60%
+      transform: translateX(-20px)
+    100%
+      transform: translateX(0)
+  .contact
+    &-links
+      padding: 20px 0px
+      width: 100%
+      box-sizing: border-box
+    &-form__wrapper
+      box-sizing: border-box
+      padding: 20px 20px
+      width: 100%
+    &-links
+      padding: 20px 20px
+      &__wrapper
+        padding-bottom: 60px
+    &-btn
+      max-width: 280px
+      font-size: 14px
+      &>img
+        padding-right: 8px
+  .footer
+    &-list
+      max-width: 100%
+      &__item
+        font-size: 14px
+  .openToWork
+    width: 100px
+    height: 100px
+@media screen and ( max-width: 476px )
+  .skills-bars
+    width: 70%
+    padding-bottom: 20px
+  .ldBar > span
+    bottom: -2px
+    font-size: 0.9rem
+  .ldBar.label-center > .ldBar-label
+    font-size: 1.1rem

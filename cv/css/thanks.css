@@ -1,0 +1,84 @@
+body {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center !important;
+}
+
+.thanks-content {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.thanks-img {
+  display: block;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.thanks-text {
+  margin: 0 auto;
+  color: #353a40;
+  text-align: center;
+}
+
+.thanks-title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 3;
+}
+
+.thanks-subtitle {
+  font-size: 26px;
+  padding-bottom: 100px;
+}
+
+.thanks-btn {
+  padding: 10px 50px;
+  background-color: #fff;
+  border: 2px solid #fec110;
+  color: #fec110;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: none;
+}
+
+.thanks-btn:hover {
+  color: #fff;
+  background-color: #fec110;
+}
+
+@media screen and (max-width: 768px) {
+  .thanks-img {
+    padding-bottom: 40px;
+  }
+  .thanks-title {
+    line-height: 1.3;
+    padding-bottom: 20px;
+  }
+  .thanks-subtitle {
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .thanks-img {
+    padding-bottom: 40px;
+  }
+  .thanks-title {
+    font-size: 26px;
+  }
+  .thanks-subtitle {
+    font-size: 18px;
+    padding-bottom: 60px;
+  }
+  .thanks-btn {
+    font-size: 16px;
+  }
+}
+/*# sourceMappingURL=thanks.css.map */
