@@ -1,7 +1,5 @@
 # Yaroslav Klimuk 
 
-Telephone: **+375 29 827-57-98**
-
 E-mail: **yaroslavklimuk21@gmail.com**
 
 **Goal:** to start a career as a junior front-end developer. Grow to the position of senior in 5 years.
