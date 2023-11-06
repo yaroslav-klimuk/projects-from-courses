@@ -1,1 +1,1 @@
-https://yaroslav-klimuk.github.io/portfolio/gem-puzzle/
+https://yaroslav-klimuk.github.io/projects-from-courses/gem-puzzle/
