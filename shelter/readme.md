@@ -1,1 +1,1 @@
-https://yaroslav-klimuk.github.io/portfolio/shelter/
+https://yaroslav-klimuk.github.io/projects-from-courses/shelter/
