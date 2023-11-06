@@ -1,1 +1,1 @@
-https://yaroslav-klimuk.github.io/portfolio/calculator/
+https://yaroslav-klimuk.github.io/projects-from-courses/calculator/
