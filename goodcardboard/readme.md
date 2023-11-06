@@ -1,1 +1,1 @@
-https://yaroslav-klimuk.github.io/portfolio/goodcardboard/
+https://yaroslav-klimuk.github.io/projects-from-courses/goodcardboard/
